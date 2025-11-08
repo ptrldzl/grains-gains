@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "src/worker/index.ts": {
+      "runtime": "edge"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/src/worker/index.ts"
+    },
+    {
+      "source": "/((?!.*\\..*|_next|assets|api).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
