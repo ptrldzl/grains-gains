@@ -1,0 +1,12 @@
+
+-- Restore the deleted dishes
+INSERT INTO dishes (id, name, description, calories, protein, carbs, fats, price, category, is_vegetarian, is_high_protein, is_low_calorie, image_url, available, created_at, updated_at) VALUES
+(7, 'Paneer Stuffed Omelette', '2 Whole Eggs + 1 Egg White stuffed with seasoned, shredded Paneer and a touch of herbs. Served with two slices of toasted Whole Wheat bread.', ' 290-330 kcal ', ' P: 20-22g ', 'C: 20-25g ', 'F: 10-12g', 60.0, 'NON_PREMIUM', 1, 1, 0, NULL, 1, '2025-09-30T10:13:17+05:30', '2025-09-30T10:13:17+05:30'),
+(8, 'Tandoori Paneer Quinoa Bowl', 'Grilled Paneer in Tandoori spices, served on Quinoa with roasted veggies. A complete, balanced meal.', '390-430 kcal', '25-28g ', '35-40g', '10-12g', 120.0, NULL, 1, 1, 0, NULL, 1, '2025-09-30T10:18:10+05:30', '2025-09-30T10:18:10+05:30'),
+(9, 'Paneer Tikka Whole Wheat Wrap', 'Succulent Paneer Tikka pieces, mint chutney, and raw veggies, all rolled in a whole wheat tortilla/roti.', '330-370 kcal', '20-22g', '30-35g', '10-12g', 100.0, NULL, 1, 1, 0, NULL, 1, '2025-09-30T10:21:01+05:30', '2025-09-30T10:21:01+05:30'),
+(10, 'Crispy Paneer Chilli Bites (Air-Fried)', 'Small, air-fried Paneer cubes tossed in a dry, zesty chilli and capsicum seasoning. Delicious and low-oil.', '230-270 kcal', '16-20g', '10-14g', '12-15g', 90.0, NULL, 1, 1, 1, NULL, 1, '2025-09-30T10:24:38+05:30', '2025-09-30T10:24:38+05:30'),
+(11, 'Mini Tandoori Veggie Whole Wheat Pizza', 'Mini whole wheat crust topped with Tandoori spices, bell peppers, and a touch of low-fat mozzarella.', '300-340 kcal', '15-18g ', '40-45g', '8-10g', 140.0, NULL, 1, 0, 0, NULL, 1, '2025-09-30T10:25:55+05:30', '2025-09-30T10:25:55+05:30'),
+(12, 'Peanut Butter Banana Power Shake', 'Creamy shake with banana, milk, and high-protein peanut butter. (Add ₹30 for 1/2 Scoop Whey).', '290-330 kcal', '20-25g ', ' 35-40g', '8-10g', 80.0, NULL, 1, 1, 1, NULL, 1, '2025-09-30T10:28:26+05:30', '2025-09-30T10:28:26+05:30');
+
+-- Reset the sqlite_sequence back to the original value
+UPDATE sqlite_sequence SET seq = 19 WHERE name = 'dishes';
